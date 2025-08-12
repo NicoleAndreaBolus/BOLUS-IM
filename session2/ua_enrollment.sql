@@ -21,7 +21,7 @@ desc students;
 desc enrollment;
 desc courses;
 
-CREATE TABLE enrollment(
+CREATE TABLE enrollments(
 	enrollment_id INT auto_increment,
     student_id INT,
     course_id INT,
