@@ -1,12 +1,10 @@
 Show databases;
 
-DROP DATABASE UA_ENROLLMENT;
-
 CREATE DATABASE UA_ENROLLMENT;
 
 USE UA_ENROLLMENT;
 
-CREATE TABLE student(
+CREATE TABLE students(
 	student_id INT auto_increment,
 	first_name VARCHAR(100),
     middle_name VARCHAR(100),
@@ -19,7 +17,7 @@ CREATE TABLE student(
 
 show tables;
 
-desc student;
+desc students;
 desc enrollment;
 desc courses;
 
@@ -30,7 +28,7 @@ CREATE TABLE enrollment(
     enrollment_date DATE,
     isPaid BOOLEAN,
     PRIMARY KEY (enrollment_id),
-    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
     FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
 
