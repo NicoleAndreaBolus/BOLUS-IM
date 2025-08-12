@@ -35,7 +35,7 @@ CREATE TABLE enrollments(
 CREATE TABLE courses(
 	course_id INT auto_increment,
     course_name VARCHAR(100),
-    unit INT,
+    units INT,
     instructor VARCHAR(200),
     room VARCHAR(10),
     PRIMARY KEY (course_id)
